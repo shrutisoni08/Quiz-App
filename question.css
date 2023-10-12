@@ -1,0 +1,105 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    color: gray;
+}
+body{
+    background-color: aliceblue;
+}
+.container {
+    background-color: whitesmoke;
+    height: 40rem;
+    width: 45rem;
+    border: 2px solid gray;
+    box-shadow: 5px 10px 10px gray;
+    display: flex;
+    justify-content: center;
+    margin: 4% 0px 0px 25%;
+    align-items: center;
+    text-align: center;
+  /*-------- to align timer and score left and right------------------ */
+}
+.time_score{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5rem;
+    padding-right:5rem;
+}
+.timer{
+    height: 50px;
+    width: 50px;
+    padding: 13px;
+    border: 5px solid  rgb(27, 145, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:  rgb(27, 145, 255);
+
+}
+.score{
+    display: flex;
+    align-items: center;
+    font-size: x-large;
+}
+.que_no{  height: 50px;
+    width: 50px;
+    padding: 13px;
+    background-color: white;
+    border:5px solid rgb(27, 145, 255);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    color: rgb(27, 145, 255);
+
+}
+.que_box{
+    width: 30rem;
+    height: 5rem;
+    border: 2px solid gray;
+    color: rgba(0, 0, 0, 0.793);
+    margin-top: 40px;
+    padding: 30px;
+    border-radius: 5px;
+}
+.box{ display: flex;
+    justify-content: center;
+    position: relative;
+}
+input[type="radio"]{
+    display: none;
+}
+label{
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: large;
+    padding:5px 60px 5px 60px;
+    background-color:  rgba(27, 145, 255,0.3);
+    box-shadow: 5px 5px 5px gray;
+}
+input[type="radio"]:checked + label
+{
+    background-color: rgb(27, 145, 255);
+    color: white;
+}
+.buttons{
+    padding: 25px;
+    display: grid;
+     grid-template-areas:
+    'option1 option3
+    'option2 option4';
+    grid-gap: 10px; 
+}
+
+button {
+    padding: 5px 20px;
+    background-color: rgb(27, 145, 255);
+    color:white;
+    border-radius: 3rem;
+    border-color: rgb(27, 145, 255);
+    box-shadow: 5px 5px 5px gray;
+    height: 2rem;
+}

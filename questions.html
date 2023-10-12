@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Questions</title>
+    <link rel="stylesheet" href="question.css">
+</head>
+<body>
+    <div class="container"> <!--MAIN CONTAINER-->
+        <div id="main" class="main"> <!--CHILD DIV-->
+            <h4 id="Que_type_Name" style="color:  rgba(0, 0, 0, 0.793);">Pipes And Cisterns</h4>
+            <div class="time_score">
+                <div class="timer">
+                    <h2 id="timer" 2>220</h2>
+                </div>
+                <div  class="score">
+                    <span>score:<b id="score" style="color: rgba(6, 6, 6, 0.634);">0</b></span>
+                </div>
+            </div>
+            <div class="box">
+            <div class="que_no">
+                <h2 id="que_number"></h2><h2>/10</h2>
+
+            </div>
+            <div class="que_box">
+                <p style="margin-top: 20px;" id="QuesBox"></p>
+            </div>
+            </div>
+            <div class="buttons">
+                <input class="options" type="radio" value="a" onclick="clr_on_click1()" name="option" id="option1"><label id="a" for="option1">6 HRS</label>
+                <input class="options" type="radio" value="b" onclick="clr_on_click2()" name="option" id="option2"><label id="b" for="option2">6 HRS</label>
+                <input class="options" type="radio" value="c" onclick="clr_on_click3()" name="option" id="option3"><label id="c" for="option3">6 HRS</label>
+                <input class="options" type="radio" value="d" onclick="clr_on_click4()" name="option" id="option4"><label id="d" for="option4">6 HRS</label>
+            </div>
+            <button onclick="submitQuiz()">Next Question</button>
+
+        </div> <!--CHILD DIV CLOSED-->
+    </div> <!--MAIN CONTAINER CLOSED-->
+ 
+    <div id="resultpage"></div>
+    <script src="question.js"></script>
+
+</body>
+
+</html>

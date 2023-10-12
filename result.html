@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Final Result</title>
+    <style>
+        *{
+            margin: 0%;
+            padding: 0%;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+            font-family: sans-serif;
+            color: gray;
+        }
+      body {
+        background-color: aliceblue;
+      }
+      .container {
+        height: 40rem;
+        width: 45rem;
+        margin: 50px 0px 0px 25rem;
+        border: 2px solid gray;
+        box-shadow: 5px 10px 10px gray;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        background-color: whitesmoke;
+      }
+      h1{
+        padding-top: 6rem;
+        color: rgb(27, 145, 255);
+      }
+      button{
+        background-color: rgb(27, 145, 255);
+        color: white;
+        border-radius: 2rem;
+        border-color: rgb(27, 145, 255);
+        box-shadow: 5px 5px 5px gray;
+        height: 3rem;
+        width: 10rem;
+        cursor: pointer;
+      }
+      .button {
+        margin-top: 5rem;
+      }
+      .button:hover{
+        color: red;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container"> <!--MAIN CONTAINER-->
+      <div class="result">
+        <h1>Quiz Result</h1><br>
+        <h3><b id="Name">ABCD</b><h3>
+        <span>your result is:</span><br><br>
+        <h3>Total Time Taken:<b id="time_taken">110</b> Seconds</h3><br>
+        <h3>Total questions:<b>10</b></h3><br>
+        <h3>Attempt:<b id=">Attempt">10</b></h3><br>
+        <h3>Correct:<b id="Correct">3</b></h3><br>
+        <h3>Wrong:<b id="wrong">7</b></h3><br>
+        <h3>Percentage:<b id="Percentage">30.00</b><b>%</b></h3><br>
+    </div>
+      
+        <div class="button"> <!--BUTTONS SECTION-->
+          <button onclick="startAgain()">Start Again</button>
+          <button onclick="go_to_home()"> Go To Home</button>
+        </div> <!--BUTTONS SECTION CLOSED-->
+
+    </div> <!--MAIN CONTAINER CLOSED-->
+
+    <script>
+      let Time = localStorage.getItem("time");
+      let Name = localStorage.getItem("Name");
+      let correct = localStorage.getItem("Correct");
+      let wrong = localStorage.getItem("Wrong");
+      result = () => {
+        document.getElementById("time_taken").innerText = Time;
+        document.getElementById("Name").innerText = Name;
+        document.getElementById("Correct").innerText = correct;
+        document.getElementById("wrong").innerText = wrong;
+        document.getElementById("Percentage").innerText = correct * 10;
+      };
+      const go_to_home = () => {
+        window.location.href = "index.html";
+        window.localStorage.clear();
+      };
+      const startAgain = () => {
+        window.location.href = "questions.html";
+        window.localStorage.removeItem("Time");
+        window.localStorage.removeItem("correct");
+        window.localStorage.removeItem("wrong");
+      };
+
+      result();
+    </script>
+  </body>
+</html>

@@ -1,0 +1,82 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+    color: gray;
+}
+body{
+    background-color: aliceblue;
+}
+.container {
+    height: 40rem;
+    width: 45rem;
+    border: 2px solid rgb(129, 128, 128);
+    box-shadow: 5px 10px 10px gray;
+    margin-top: 50PX;
+    margin-left: 25%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: whitesmoke;
+}
+.heading{
+    margin-top: 20px;
+    color: rgb(27, 145, 255);
+}
+h4{
+    padding: 20px;
+}
+.para{
+    margin-top: 20px;
+}
+input[type=text]{
+    padding-left: 10px;
+    width: 75%;
+    height: 2rem;
+    border-radius: 8px;
+    border-color: gray;
+    box-shadow: -2px -2px 2px rgb(182, 179, 179) inset;
+}
+.enter_btn{
+    background-color: rgb(27, 145, 255);
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px gray;
+    margin-left: 1.5rem;
+    width: 5rem;
+    height: 2rem;
+}
+input[type="radio"]{
+   display: none;
+}
+button{
+    margin-left: 20px;
+    background-color: rgba(27, 145, 255, 0.2);
+    color: gray;
+    border-radius: 5px;
+    border-color: rgb(27, 145, 255);
+    box-shadow: 5px 5px 5px gray;
+    height: 2rem;
+}
+.buttons{
+    display: grid;
+    grid-template-areas: 
+    'option1 option3'
+    'option2 option4';
+    grid-gap: 40px;
+    margin: 20px;
+}
+label{
+    border: 2px solid gray;
+    border-radius: 10px;
+    font-size: large;
+    padding: 5px 60px 5px 60px;
+    background-color: rgba(27, 145, 255, 0.3);
+    box-shadow: 5px 5px 5px gray;
+}
+input[type="radio"]:checked+label {
+    background-color: rgb(27, 145, 255);
+    color: white;
+}
